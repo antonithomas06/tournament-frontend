@@ -1,0 +1,26 @@
+.table-grid {
+
+  display: grid;
+  gap: 1rem;
+
+  grid-template-columns: 100px 220px 220px 220px;
+  justify-content: center;
+  --stagger-delay: 100ms;
+}
+
+.heading {
+  font-weight: bolder;
+  color:aqua;
+}
+.tblentry:nth-child(8n+1), .tblentry:nth-child(8n+2), .tblentry:nth-child(8n+3), .tblentry:nth-child(8n+4) {
+  color:aqua;
+}
+ 
+/* Mobile layout */
+@media (max-width: 767px) {
+  .table-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+
+}
