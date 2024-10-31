@@ -90,30 +90,21 @@
   animation-delay: calc(13 * var(--stagger-delay));
 }
 
-/* Mobile layout */
-@media (max-width: 767px) {
-  .animated-grid {
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+.animated-grid {
     grid-template-areas:
-      'a'
-      'g'
-      'd'
-      'l'
-      '🌟'
-      'e'
-      'k'
-      'f'
-      'j'
-      'i'
-      'h'
-      'b';
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
-  }
-  .card {
-    background-color: rgb(36, 243, 243);
-    animation: cardEntrance 700ms ease-out;
-    animation-fill-mode: backwards;
-    height: 75vh;
-  }
+        'a'
+        'd'
+        'g'
+        'j';
+    
+        grid-template-rows: repeat(4, 87%);
+        grid-template-columns: 100%;
+        height: 25%;
+
+
+    }
 
 }
