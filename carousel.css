@@ -1,0 +1,92 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    background-color: #121212; /* Dark background */
+    color: white
+}
+
+.container-carousel {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 75vh;
+    margin: 0;
+}
+
+.carousel {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 80%;
+    overflow: hidden;
+}
+
+.carousel-container {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.card {
+    min-width: 30vw; /* Adjust width as needed */
+    min-height: 40vh;
+    margin: 10px;
+    background: #1e1e1e; /* Dark card background */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+/* Different style for every second card */
+.card:nth-child(2n) {
+    background: #2e2e2e; /* Slightly lighter background for every second card */
+    color: aqua;
+}
+
+.carousel-button {
+    background-color: transparent;
+    border: none;
+    font-size: 30px;
+    color: #ffffff; /* Light color for buttons */
+    cursor: pointer;
+    z-index: 10;
+}
+
+.carousel-button.left {
+    position: absolute;
+    left: 10px;
+}
+
+.carousel-button.right {
+    position: absolute;
+    right: 10px;
+}
+
+@media (max-width: 600px) {
+    .carousel {
+        flex-direction: column; /* Stack buttons and cards vertically */
+        align-items: stretch; /* Stretch buttons and cards to full width */
+    }
+    
+    .carousel-container {
+        flex-direction: column; /* Stack cards vertically */
+        align-items: center; /* Center cards */
+        width: 100%; /* Full width */
+    }
+
+    .container-carousel {
+        height: auto;
+       
+    }
+
+    .card {
+        min-width: 90%; /* Adjust width for mobile */
+        margin: 10px 0; /* Vertical margin */
+    }
+
+    .carousel-button {
+        display: none; /* Hide buttons on mobile */
+    }
+}
